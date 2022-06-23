@@ -5,7 +5,7 @@ import palette from '../../styles/palette';
 const Container = styled.div`
   display: flex;
   margin-bottom: 10px;
-  .Answer {
+  .Question {
     display: inline-block;
     position: relative;
     padding: 20.14px 16.22px 18.39px 16.35px;
@@ -13,6 +13,7 @@ const Container = styled.div`
     font-size: 14px;
     font-weight: 700;
     width: auto;
+    max-width: 380px;
     border-radius: 54px;
     background-color: ${palette.gray};
     z-index: 10;
@@ -26,7 +27,7 @@ const Container = styled.div`
       transform: scaleX(-1);
     }
   }
-  .div {
+  .null {
     flex-grow: 1;
   }
 `;
@@ -39,7 +40,7 @@ interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
 const QuestionBubble: React.FC<IProps> = ({ input, selected }) => {
   return (
     <Container>
-      <div className="Answer">
+      <div className="Question">
         <img src={'/gray.png'} />
         {input}
       </div>

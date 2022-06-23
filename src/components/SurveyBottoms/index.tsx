@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
 interface CntProp {
@@ -59,9 +60,11 @@ const SurveyBottoms = ({
               현재까지 총 {cnt}명이 참여했습니다
             </Text>
           </div>
-            <Button1>
-              와랄라 잇 BTI 시작하기
-            </Button1>
+            <Link to="/survey-home">
+              <Button1>
+                와랄라 잇 BTI 시작하기
+              </Button1>
+            </Link>
             <Button2>
               무지성 식사 룰렛 돌리기!
             </Button2>
