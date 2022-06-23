@@ -16,8 +16,8 @@ react, typescript, html, css
 ||||
 |-|-|-|
 |Design   | 신예준 <br>  ||
-|Front-end| 고대화 <br> @daehwa00 |오하형 <br> @maryoh2003 |
-|Back-end | 한승원 <br> @SW-H||
+|Front-end| 고대화 <br> [@daehwa00](https://github.com/daehwa00) |오하형 <br> [@maryoh2003](https://github.com/maryoh2003) |
+|Back-end | 한승원 <br> [@SW-H](https://github.com/SW-H)||
 
 ## 실행 예시 화면
 <img src="main_page.png" width="262" height="400"/> <img src="rulet.png" width="262" height="400"/>
