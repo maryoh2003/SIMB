@@ -1,4 +1,3 @@
-import React from 'react';
 import QuestionPage from './pages/QuestionPage';
 import MainPage from './pages/MainPage';
 import styled from 'styled-components';
