@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dispatch, SetStateAction } from "react";
 import styled from 'styled-components';
+import Roulette from '../SurveyResult/Roulette';
 
 interface IdProp {
   id: string,
@@ -13,6 +14,10 @@ const Box = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+
+  #survey-nickname::placeholder {
+
+  }
 `
 
 const Button = styled.button`
@@ -51,7 +56,7 @@ const SurveyHome = ({
           10번만 답하고 식사메뉴 정하기!
         </SubTitle>
         <div style={{ "fontSize": "14px" }}>별명을 입력해주세요</div>
-        <input type="text" value={id} onChange={e => setId(e.target.value)} placeholder="별명(8~12,한글,영문,특수문자 입력 가능)" style={{ "border": "none", "outline": "none", "fontSize": "16px", "width": "15vw", "height": "3vw", "backgroundColor": "#F8F8F8", "borderRadius": "10px", "marginTop": "10px", "marginBottom": "10px" }} />
+        <input id='survey-nickname' type="text" value={id} onChange={e => setId(e.target.value)} placeholder="별명(8~12,한글,영문,특수문자 입력 가능)" style={{ "border": "none", "outline": "none", "fontSize": "16px", "width": "15vw", "height": "3vw", "backgroundColor": "#F8F8F8", "borderRadius": "10px", "marginTop": "10px", "marginBottom": "10px" }} />
         <div>
           <Button>
             시작하기
