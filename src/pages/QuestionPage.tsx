@@ -3,6 +3,7 @@ import QuestionBubble from '../components/Bubble/QuestionBubble';
 import styled from 'styled-components';
 import { useRef, useState } from 'react';
 import { Questions, Answers } from '../lib/staticData';
+import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`
   .selected {
@@ -51,10 +52,11 @@ type answerType = {
 };
 
 const QuestionPage = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(10);
   const [answers, setAnswers] = useState<answerType[]>([]);
 
   const nextId = useRef(0);
+  let navigate = useNavigate();
 
   const onClickAnswer = (answer: string) => {
     const nextAnswer: answerType = {
@@ -63,8 +65,12 @@ const QuestionPage = () => {
     };
     setAnswers(answers.concat(nextAnswer));
 
+    if (count === 0) {
+      navigate('/result');
+    }
+
     nextId.current += 1;
-    setCount(count + 1);
+    setCount(count - 1);
   };
 
   return (
@@ -79,9 +85,9 @@ const QuestionPage = () => {
           ))}
       </div>
       <div className="question">
-        <QuestionBubble input={Questions[count]} />
+        <QuestionBubble input={Questions[10 - count]} />
         <ul>
-          {Answers[count].map((answer) => (
+          {Answers[10 - count].map((answer) => (
             <li key={answer}>
               <div
                 className="answer-bubble"

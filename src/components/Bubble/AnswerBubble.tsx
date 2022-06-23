@@ -69,11 +69,3 @@ const AnswerBubble: React.FC<IProps> = ({ input, answer = false }) => {
 };
 
 export default AnswerBubble;
-
-{
-  /* <div className="Answer">
-<img src={'/gray.png'} />
-{input}
-</div>
-<div className="null" /> */
-}
