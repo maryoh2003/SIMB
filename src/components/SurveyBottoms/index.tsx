@@ -6,25 +6,26 @@ interface CntProp {
 };
 
 const Box = styled.div`
+  width: 100%;
+  margin-bottom: 40px;
 `
 
 const InBox = styled.div`
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 `
 
 const Text = styled.div`
   text-align: center;
+  color: black;
 `
 
 const Button1 = styled.button`
   background-color: #FFD56A;
   border: none;
-  width: 15vw;
-  height: 3vw;
+  width: 100%;
+  height: 40px;
   font-size: 14px;
   color: white;
   border-radius: 10px;
@@ -36,8 +37,8 @@ const Button1 = styled.button`
 const Button2 = styled.button`
   background-color: #1E93FF;
   border: none;
-  width: 15vw;
-  height: 3vw;
+  width: 100%;
+  height: 40px;
   font-size: 14px;
   color: white;
   border-radius: 10px;
@@ -46,7 +47,7 @@ const Button2 = styled.button`
   margin-top: 11px;
 `
 
-const SurveyMain = ({
+const SurveyBottoms = ({
   cnt,
 }: CntProp) => {
   return (
@@ -58,20 +59,16 @@ const SurveyMain = ({
               현재까지 총 {cnt}명이 참여했습니다
             </Text>
           </div>
-          <div>
             <Button1>
               와랄라 잇 BTI 시작하기
             </Button1>
-          </div>
-          <div>
             <Button2>
               무지성 식사 룰렛 돌리기!
             </Button2>
-          </div>
         </div>
       </InBox>
     </Box>
   );
 };
 
-export default SurveyMain;
+export default SurveyBottoms;

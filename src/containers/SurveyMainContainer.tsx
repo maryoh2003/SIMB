@@ -1,7 +1,7 @@
 import React from 'react';
-import { observer } from "mobx-react-lite";
+import { observer } from "mobx-react";
 import { useCallback } from "react";
-import SurveyMain from "../components/SurveyMain";
+import SurveyMain from "../components/SurveyBottoms";
 import { useState } from 'react';
 import SurveyRepository from '../repositories/SurveyRepository';
 
