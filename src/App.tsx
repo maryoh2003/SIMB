@@ -10,7 +10,7 @@ import SurveyHomePage from './pages/SurveyHomePage';
 const Container = styled.div`
   position: relative;
   width: 390px;
-  height: 100vh;
+  height: 844px;
   margin: auto;
 `;
 function App() {

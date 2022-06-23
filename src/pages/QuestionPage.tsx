@@ -6,21 +6,21 @@ import { Questions, Answers } from '../lib/staticData';
 
 const Container = styled.div`
   .selected {
+    overflow-y: auto;
     position: absolute;
+    max-height: 470px;
     top: 0;
     left: 0;
-    ul {
-      list-style: none;
+    float: right;
+    margin: auto;
+    width: 390px;
+    ::-webkit-scrollbar {
+      display: none;
     }
-    li:nth-child(even) {
-      float: right;
-      margin: auto;
-      .a {
-        position: absolute;
-        top: 72px;
-      }
-      &:after {
-        float: right;
+    .ab {
+      position: absoulte;
+      right: 0;
+      &:before {
         flex-grow: 1;
       }
     }
@@ -70,15 +70,13 @@ const QuestionPage = () => {
   return (
     <Container>
       <div className="selected">
-        <ul>
-          {answers &&
-            answers.map((answer, index) => (
-              <li>
-                <QuestionBubble className="q" input={Questions[index]} />
-                <AnswerBubble className="b" input={answers[index].answer} />
-              </li>
-            ))}
-        </ul>
+        {answers &&
+          answers.map((answer, index) => (
+            <>
+              <QuestionBubble className="qb" input={Questions[index]} />
+              <AnswerBubble className="ab" input={answers[index].answer} />
+            </>
+          ))}
       </div>
       <div className="question">
         <QuestionBubble input={Questions[count]} />
