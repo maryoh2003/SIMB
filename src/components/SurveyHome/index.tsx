@@ -2,6 +2,7 @@ import React from 'react';
 import { Dispatch, SetStateAction } from "react";
 import styled from 'styled-components';
 import Roulette from '../SurveyResult/Roulette';
+import { Link } from 'react-router-dom';
 
 interface IdProp {
   id: string,
@@ -62,9 +63,11 @@ const SurveyHome = ({
           < div style={{ "fontSize": "14px" }}>별명을 입력해주세요</div>
           <input id='survey-nickname' type="text" value={id} onChange={e => setId(e.target.value)} placeholder="별명(8~12,한글,영문,특수문자 입력 가능)" style={{ "border": "none", "outline": "none", "fontSize": "16px", "width": "15vw", "height": "3vw", "backgroundColor": "#F8F8F8", "borderRadius": "10px", "marginTop": "10px", "marginBottom": "10px" }} />
           <div>
-            <Button>
-              시작하기
-            </Button>
+            <Link to="/question">
+              <Button>
+                시작하기
+              </Button>
+            </Link>
           </div>
         </div>
       </Box >
