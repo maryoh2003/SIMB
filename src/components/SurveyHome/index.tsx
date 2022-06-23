@@ -36,10 +36,13 @@ const Button = styled.button`
 const Title = styled.div`
   text-align: center;
   font-weight: bold;
+  color: black;
 `
 
 const SubTitle = styled.div`
   text-align: center;
+  color: black;
+  margin-top: 8px;
 `
 
 const SurveyHome = ({
@@ -47,23 +50,25 @@ const SurveyHome = ({
   setId
 }: IdProp) => {
   return (
-    <Box>
-      <div>
-        <Title>
-          와랄라 잇 BTI 시작
-        </Title>
-        <SubTitle>
-          10번만 답하고 식사메뉴 정하기!
-        </SubTitle>
-        <div style={{ "fontSize": "14px" }}>별명을 입력해주세요</div>
-        <input id='survey-nickname' type="text" value={id} onChange={e => setId(e.target.value)} placeholder="별명(8~12,한글,영문,특수문자 입력 가능)" style={{ "border": "none", "outline": "none", "fontSize": "16px", "width": "15vw", "height": "3vw", "backgroundColor": "#F8F8F8", "borderRadius": "10px", "marginTop": "10px", "marginBottom": "10px" }} />
+    <div>
+      <Box>
         <div>
-          <Button>
-            시작하기
-          </Button>
+          <Title>
+            와랄라 잇 BTI 시작
+          </Title>
+          <SubTitle>
+            10번만 답하고 식사메뉴 정하기!
+          </SubTitle>
+          < div style={{ "fontSize": "14px" }}>별명을 입력해주세요</div>
+          <input id='survey-nickname' type="text" value={id} onChange={e => setId(e.target.value)} placeholder="별명(8~12,한글,영문,특수문자 입력 가능)" style={{ "border": "none", "outline": "none", "fontSize": "16px", "width": "15vw", "height": "3vw", "backgroundColor": "#F8F8F8", "borderRadius": "10px", "marginTop": "10px", "marginBottom": "10px" }} />
+          <div>
+            <Button>
+              시작하기
+            </Button>
+          </div>
         </div>
-      </div>
-    </Box>
+      </Box >
+    </div>
   );
 };
 
