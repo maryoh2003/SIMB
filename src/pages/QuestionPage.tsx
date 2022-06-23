@@ -15,10 +15,6 @@ const Container = styled.div`
     li:nth-child(even) {
       float: right;
       margin: auto;
-      .a {
-        position: absolute;
-        top: 72px;
-      }
       &:after {
         float: right;
         flex-grow: 1;

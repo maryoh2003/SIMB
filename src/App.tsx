@@ -1,4 +1,3 @@
-import QuestionPage from './pages/QuestionPage';
 import MainPage from './pages/MainPage';
 import styled from 'styled-components';
 import GlobalStyle from './styles/GlobalStyle';
@@ -14,7 +13,6 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        {/* <QuestionPage /> */}
         <MainPage />
       </Container>
     </>
